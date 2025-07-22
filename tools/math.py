@@ -1,4 +1,5 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
+
 
 mcp = FastMCP("Math")
 
@@ -26,4 +27,4 @@ def divide(a: int, b: int) -> float:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="http", port=8600, host="0.0.0.0")
